@@ -1,0 +1,25 @@
+{
+	"name": "coach-site-template",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"emdash": { "seed": "seed/seed.json" },
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"deploy": "astro build && wrangler deploy"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "13.7.0",
+		"@astrojs/react": "^5.0.0",
+		"@emdash-cms/cloudflare": "0.35.0",
+		"astro": "^6.3.0",
+		"emdash": "0.35.0",
+		"react": "19.2.4",
+		"react-dom": "19.2.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^5.20261110.1",
+		"wrangler": "^4.135.0"
+	}
+}

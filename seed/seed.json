@@ -1,0 +1,214 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Coach Site Template",
+    "description": "A starter site for an executive coach. Replace this text in the admin.",
+    "author": "Template"
+  },
+  "settings": {
+    "title": "My Coach Site",
+    "tagline": "Say what you do in one line",
+    "url": "https://example.com"
+  },
+  "collections": [
+    {
+      "slug": "pages",
+      "label": "Pages",
+      "labelSingular": "Page",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "intro",
+          "label": "Intro",
+          "type": "text",
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    },
+    {
+      "slug": "services",
+      "label": "Services",
+      "labelSingular": "Service",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "summary",
+          "label": "Summary",
+          "type": "text",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "duration",
+          "label": "Duration / Cadence",
+          "type": "string"
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "order",
+          "label": "Display Order",
+          "type": "integer"
+        },
+        {
+          "slug": "featured",
+          "label": "Feature on Home",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "slug": "testimonials",
+      "label": "Testimonials",
+      "labelSingular": "Testimonial",
+      "supports": [
+        "drafts",
+        "revisions"
+      ],
+      "fields": [
+        {
+          "slug": "quote",
+          "label": "Quote",
+          "type": "text",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "author_name",
+          "label": "Author Name",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "author_title",
+          "label": "Author Title",
+          "type": "string"
+        },
+        {
+          "slug": "author_company",
+          "label": "Author Company",
+          "type": "string"
+        },
+        {
+          "slug": "order",
+          "label": "Display Order",
+          "type": "integer"
+        },
+        {
+          "slug": "featured",
+          "label": "Feature on Home",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "slug": "blog_posts",
+      "label": "Blog Posts",
+      "labelSingular": "Blog Post",
+      "urlPattern": "/blog/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "search",
+        "seo"
+      ],
+      "commentsEnabled": false,
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Title",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Excerpt",
+          "type": "text",
+          "searchable": true
+        },
+        {
+          "slug": "featured_image",
+          "label": "Featured Image",
+          "type": "image"
+        },
+        {
+          "slug": "published_date",
+          "label": "Published Date",
+          "type": "datetime",
+          "required": true
+        },
+        {
+          "slug": "content",
+          "label": "Content",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "Categories",
+      "labelSingular": "Category",
+      "hierarchical": true,
+      "collections": [
+        "blog_posts"
+      ],
+      "terms": []
+    },
+    {
+      "name": "tag",
+      "label": "Tags",
+      "labelSingular": "Tag",
+      "hierarchical": false,
+      "collections": [
+        "blog_posts"
+      ],
+      "terms": []
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Primary Navigation",
+      "items": []
+    }
+  ]
+}
